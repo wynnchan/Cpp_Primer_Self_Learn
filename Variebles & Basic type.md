@@ -1,1 +1,12 @@
+## 基本内置类型
+算数类型（arithmetic type）：整型（包括字符和布尔型），浮点型
 
+除去布尔型和扩展的字符型以外，其他整型可以划分为带符号的（signed）和无符号的（unsigned），exg: unsigned long, unsigned int，signed char
+
+some rules: 1.数值不可能为负时，选用无符号类型；2.使用int执行整数计算，位数不够时使用long long；3.算术表达式中不要使用char或者bool，存储时使用；4.浮点数使用double，float和double的运算代价相差无几。
+
+类型转换：1.非布尔类型的算术值-->布尔类型，0为false，否则为true；2.布尔值-->非布尔类型，false为0，true为1；3.浮点数-->整数类型，保留整数；4.整数值-->浮点类型，小数部分为0；5.超出范围的值-->无符号类型，对该类型表示总数取模，exg，-1-->unsigned char结果为255；6.超出范围的数-->带符号类型，undefined
+
+当一个算术表达式中既有无符号数又有int值时，int值会转化为无符号数
+
+空类型（void）
